@@ -16,6 +16,8 @@ Output 2: 13
 
 Input 3: N = 315
 Output 3: 3 3 5 7
+
+Source: geeksforgeeks.org
  */
 public class PrimeFactors {
 

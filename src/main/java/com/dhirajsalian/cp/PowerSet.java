@@ -13,6 +13,8 @@ Output 1: "", "a", "b", "c", "ab", "bc", "ac", "abc"
 
 Input 2: s = "ab"
 Output 2: "", "a", "b", "ab"
+
+Source: geeksforgeeks.org
  */
 public class PowerSet {
 

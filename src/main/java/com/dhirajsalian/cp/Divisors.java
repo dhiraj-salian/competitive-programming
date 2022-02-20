@@ -14,6 +14,7 @@ Output 2: 1 2 4 5 10 20 25 50 100
 Input 3: N = 7
 Output 3: 1 7
 
+Source: geeksforgeeks.org
  */
 public class Divisors {
 

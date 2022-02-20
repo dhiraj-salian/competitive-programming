@@ -13,6 +13,8 @@ Output 2: 2
 
 Input 3: N = 100
 Output 3: 24
+
+Source: geeksforgeeks.org
  */
 public class FactorialTrailingZeros {
 

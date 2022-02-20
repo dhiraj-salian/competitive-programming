@@ -10,6 +10,7 @@ Output 1: 3
 
 Input 2: arr[] = { 8, 7, 7 , 8 , 8 }
 
+Source: geeksforgeeks.org
  */
 public class OddOccurringNumber {
 

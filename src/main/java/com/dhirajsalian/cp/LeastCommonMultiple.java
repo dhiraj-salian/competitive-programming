@@ -16,6 +16,8 @@ Output 3: 60
 
 Input 4: a = 3, b = 7
 Output 4: 21
+
+Source: geeksforgeeks.org
  */
 public class LeastCommonMultiple {
 

@@ -13,6 +13,8 @@ Output 2: 100
 
 Input 3: a = 7, b = 13
 Output 3: 1
+
+Source: geeksforgeeks.org
  */
 public class GreatestCommonDivisor {
 

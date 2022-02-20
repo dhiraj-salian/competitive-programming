@@ -13,6 +13,8 @@ Output 2: no
 
 Input 3: n = 101
 Output 3: yes
+
+Source: geeksforgeeks.org
  */
 public class PrimeNumber {
 

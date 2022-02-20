@@ -10,6 +10,8 @@ Output 1: yes
 
 Input 2: n = 6
 Output 2: no
+
+Source: geeksforgeeks.org
  */
 public class PowerOf2 {
 

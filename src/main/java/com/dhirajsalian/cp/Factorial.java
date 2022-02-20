@@ -13,6 +13,8 @@ Output 2: 720
 
 Input 3: N = 0
 Output 3: 1
+
+Source: geeksforgeeks.org
  */
 public class Factorial {
 

@@ -16,6 +16,8 @@ Output 3: 1
 
 Input 4: x = 5, n = 1
 Output 4: 5
+
+Source: geeksforgeeks.org
  */
 public class ComputingPower {
 
