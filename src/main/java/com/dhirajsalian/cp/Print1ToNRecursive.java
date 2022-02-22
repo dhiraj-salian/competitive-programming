@@ -11,7 +11,7 @@ Output 1: 1 2 3 4
 Input 2: n = 5
 Output 2: 1 2 3 4 5
 
-Source: geekforgeeks.org
+Source: geeksforgeeks.org
  */
 public class Print1ToNRecursive {
     static void print1toNRecursively(int n) {

@@ -11,7 +11,7 @@ Output 1: 5 4 3 2 1
 Input 2: n = 2
 Output 2: 2 1
 
-Source: geekforgeeks.org
+Source: geeksforgeeks.org
  */
 public class PrintNTo1Recursive {
 
