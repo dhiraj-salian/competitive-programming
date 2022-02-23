@@ -1,6 +1,6 @@
 package com.dhirajsalian.cp;
 
-import com.dhirajsalian.cp.util.CustomArrayUtil;
+import com.dhirajsalian.cp.util.CustomUtil;
 
 /*
 Given a sorted array A, remove duplicates from A.
@@ -32,7 +32,7 @@ public class RemoveDuplicatesArray {
         int[][] inputs = {{10, 20, 20, 30, 30, 30, 30}, {10, 10, 10}};
         for (int[] input : inputs) {
             int n = removeDuplicates(input);
-            CustomArrayUtil.print(input, n);
+            CustomUtil.print(input, n);
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.dhirajsalian.cp;
 
-import com.dhirajsalian.cp.util.CustomArrayUtil;
+import com.dhirajsalian.cp.util.CustomUtil;
 
 /*
 Given an array of integers A, move zeros to end.
@@ -28,7 +28,7 @@ public class MoveAllZerosToEnd {
                     zero = i;
             } else {
                 if (zero > -1) {
-                    CustomArrayUtil.swap(a, i, zero);
+                    CustomUtil.swap(a, i, zero);
                     zero = i;
                 }
             }
@@ -39,7 +39,7 @@ public class MoveAllZerosToEnd {
         int[][] inputs = {{8, 5, 0, 10, 0, 20}, {0, 0, 0, 10, 0}, {10, 20}};
         for (int[] input : inputs) {
             moveZerosToEnd(input);
-            CustomArrayUtil.print(input);
+            CustomUtil.print(input);
         }
     }
 }

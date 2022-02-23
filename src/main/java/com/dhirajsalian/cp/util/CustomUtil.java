@@ -1,6 +1,6 @@
 package com.dhirajsalian.cp.util;
 
-public class CustomArrayUtil {
+public class CustomUtil {
 
     public static void print(int[] a) {
         for (int i : a) {
@@ -16,9 +16,24 @@ public class CustomArrayUtil {
         System.out.println();
     }
 
+    public static void print(int[][] m) {
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
+                System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void swap(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
+    }
+
+    public static void swap(int[][] m, int i1, int j1, int i2, int j2) {
+        int temp = m[i1][j1];
+        m[i1][j1] = m[i2][j2];
+        m[i2][j2] = temp;
     }
 }

@@ -1,6 +1,6 @@
 package com.dhirajsalian.cp;
 
-import com.dhirajsalian.cp.util.CustomArrayUtil;
+import com.dhirajsalian.cp.util.CustomUtil;
 
 /*
 Given an array A, reverse the elements of the array.
@@ -19,7 +19,7 @@ public class ReverseArray {
 
     static void reverse(int[] a) {
         for (int i = 0; i < a.length / 2; i++) {
-            CustomArrayUtil.swap(a, i, a.length - i - 1);
+            CustomUtil.swap(a, i, a.length - i - 1);
         }
     }
 
@@ -27,7 +27,7 @@ public class ReverseArray {
         int[][] inputs = {{10, 5, 7, 30}, {30, 20, 5}};
         for (int[] input : inputs) {
             reverse(input);
-            CustomArrayUtil.print(input);
+            CustomUtil.print(input);
         }
     }
 

@@ -1,6 +1,6 @@
 package com.dhirajsalian.cp;
 
-import com.dhirajsalian.cp.util.CustomArrayUtil;
+import com.dhirajsalian.cp.util.CustomUtil;
 
 /*
 Given an array A, left rotate an array by d positions.
@@ -28,7 +28,7 @@ public class LeftRotateByD {
 
     static void reverse(int[] a, int start, int end) {
         while (start < end) {
-            CustomArrayUtil.swap(a, start, end);
+            CustomUtil.swap(a, start, end);
             start++;
             end--;
         }
@@ -39,7 +39,7 @@ public class LeftRotateByD {
         int[] inputD = {1, 1, 2};
         for (int i = 0; i < inputD.length; i++) {
             leftRotate(inputs[i], inputD[i]);
-            CustomArrayUtil.print(inputs[i]);
+            CustomUtil.print(inputs[i]);
         }
     }
 }
