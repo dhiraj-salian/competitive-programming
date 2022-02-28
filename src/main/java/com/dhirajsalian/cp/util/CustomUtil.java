@@ -36,4 +36,21 @@ public class CustomUtil {
         m[i1][j1] = m[i2][j2];
         m[i2][j2] = temp;
     }
+
+    public static void printLinkedList(LLNode head) {
+        while (head != null) {
+            System.out.printf("%s->", head.value);
+            head = head.next;
+        }
+        System.out.println("NULL");
+    }
+
+    public static LLNode createLinkedList(int[] arr) {
+        LLNode next = null, curr = null;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            curr = new LLNode(arr[i], next);
+            next = curr;
+        }
+        return curr;
+    }
 }
