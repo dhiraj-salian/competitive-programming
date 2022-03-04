@@ -1,5 +1,7 @@
 package com.dhirajsalian.cp.util;
 
+import java.util.ArrayList;
+
 public class CustomUtil {
 
     public static void print(int[] a) {
@@ -52,5 +54,22 @@ public class CustomUtil {
             next = curr;
         }
         return curr;
+    }
+
+    public static void addUndirectedEdge(ArrayList<ArrayList<Integer>> graph, int u, int v) {
+        graph.get(u).add(v);
+        graph.get(v).add(u);
+    }
+
+    public static void addDirectedEdge(ArrayList<ArrayList<Integer>> graph, int u, int v) {
+        graph.get(u).add(v);
+    }
+
+    public static void addDirectedWeightedEdge(ArrayList<ArrayList<GraphWeightedNode>> graph, int u, int v, int weight) {
+        graph.get(u).add(new GraphWeightedNode(v, weight));
+    }
+
+    public static String yesOrNo(boolean value) {
+        return value ? "Yes" : "No";
     }
 }
