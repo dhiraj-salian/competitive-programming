@@ -26,9 +26,4 @@ class Solution {
         }
         return res;
     }
-
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        sol.longestConsecutive(new int[]{100, 4, 200, 1, 3, 2});
-    }
 }

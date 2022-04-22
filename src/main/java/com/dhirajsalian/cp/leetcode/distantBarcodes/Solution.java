@@ -41,14 +41,4 @@ class Solution {
         });
         return entryList;
     }
-
-    public static void main(String[] args) {
-        int[] input = {1, 1, 2};
-        Solution sol = new Solution();
-        int[] output = sol.rearrangeBarcodes(input);
-        for (int i = 0; i < output.length; i++) {
-            System.out.print(output[i] + " ");
-        }
-        System.out.println();
-    }
 }
