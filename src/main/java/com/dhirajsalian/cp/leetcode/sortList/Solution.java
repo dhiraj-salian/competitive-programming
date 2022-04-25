@@ -57,19 +57,6 @@ class Solution {
         return head;
     }
 
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        ListNode next3 = new ListNode(1);
-        ListNode next2 = new ListNode(3, next3);
-        ListNode next1 = new ListNode(2, next2);
-        ListNode head = new ListNode(4, next1);
-        head = solution.sortList(head);
-        while (head.next != null) {
-            System.out.printf("%s->", head.val);
-            head = head.next;
-        }
-        System.out.println(head.val);
-    }
 }
 
 class ListNode {
