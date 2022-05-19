@@ -4,7 +4,7 @@ package com.dhirajsalian.cp.leetcode.minimumWindowSubstring;
 
 class Solution {
     public String minWindow(String s, String t) {
-        int[] tChars = new int[256], sChars = new int[256];
+        int[] tChars = new int[128], sChars = new int[128];
         for (int i = 0; i < t.length(); i++) tChars[t.charAt(i)]++;
         int start = 0, end = 0;
         String res = "";
