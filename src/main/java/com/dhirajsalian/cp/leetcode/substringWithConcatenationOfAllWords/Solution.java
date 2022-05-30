@@ -39,19 +39,4 @@ class Solution {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        List<Integer> ans = sol.findSubstring("lingmindraboofooowingdingbarrwingmonkeypoundcake", new String[]{"fooo","barr","wing","ding","wing"});
-        System.out.println(ans);
-    }
 }
-
-
-/*
-"lingmindraboofooowingdingbarrwingmonkeypoundcake"
-["fooo","barr","wing","ding","wing"]
-
-"ababaab"
-["ab","ba","ba"]
- */
