@@ -20,4 +20,18 @@ class Solution {
         }
         return bitCount;
     }
+
+    public int[] countBitsDP(int n) {
+        int[] bitCount = new int[n + 1];
+        bitCount[0] = 0;
+        if (n == 0) return bitCount;
+        bitCount[1] = 1;
+        if (n == 1) return bitCount;
+        for (int i = 2; i <= n; i++) {
+            int msb = (int) Math.floor(Math.log10(i) / Math.log10(2));
+            int closestPowerOf2 = (int) Math.pow(2, msb);
+            bitCount[i] = 1 + bitCount[i & ~closestPowerOf2];
+        }
+        return bitCount;
+    }
 }
