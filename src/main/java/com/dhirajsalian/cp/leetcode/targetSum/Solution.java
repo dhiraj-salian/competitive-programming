@@ -19,9 +19,4 @@ class Solution {
         }
         return targetSumWays[n][sum + absTarget];
     }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.findTargetSumWays(new int[]{1, 1, 1, 1, 1}, 3);
-    }
 }
