@@ -2,7 +2,34 @@
 
 package com.dhirajsalian.cp.leetcode.problemPatterns.minimumDepthOfBinaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution {
+
+    // BFS Approach
+    public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
+        int level = 1;
+        while (!q.isEmpty()) {
+            TreeNode curr = q.poll();
+            if (curr != null && curr.left == null && curr.right == null) return level;
+            if (curr == null) {
+                level++;
+                q.add(null);
+            } else {
+                if (curr.left != null) q.add(curr.left);
+                if (curr.right != null) q.add(curr.right);
+            }
+        }
+        return level;
+    }
+
+
+    /* DFS Approach
 
     public int minDepth(TreeNode root) {
         if (root == null) return 0;
@@ -15,6 +42,8 @@ class Solution {
             return 1 + Math.min(minDepth(root.left), minDepth(root.right));
         return 1 + (root.left == null ? minDepth(root.right) : minDepth(root.left));
     }
+
+    */
 }
 
 class TreeNode {
