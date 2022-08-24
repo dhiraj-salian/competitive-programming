@@ -4,10 +4,39 @@ package com.dhirajsalian.cp.leetcode.problemPatterns.cloneGraph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 class Solution {
+
+    // BFS Solution
+    public Node cloneGraph(Node node) {
+        if (node == null) return null;
+        Queue<Node> queue = new LinkedList<>();
+        Map<Integer, Node> visited = new HashMap<>();
+        queue.add(node);
+        visited.put(node.val, new Node(node.val));
+        while (!queue.isEmpty()) {
+            Node currNode = queue.poll();
+            Node clonedNode = visited.get(currNode.val);
+            for (Node neighbor : currNode.neighbors) {
+                Node clonedNeighbor = visited.containsKey(neighbor.val) ?
+                        visited.get(neighbor.val) : new Node(neighbor.val);
+                clonedNode.neighbors.add(clonedNeighbor);
+                if (!visited.containsKey(neighbor.val)) {
+                    queue.add(neighbor);
+                    visited.put(neighbor.val, clonedNeighbor);
+                }
+            }
+        }
+        return visited.get(1);
+    }
+
+
+    /*
+    DFS Solution
     public Node cloneGraph(Node node) {
         if (node == null)
             return null;
@@ -25,6 +54,8 @@ class Solution {
         }
         return clonedNode;
     }
+
+    */
 }
 
 class Node {
