@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.Queue;
 
 class Solution {
+    /*
+
+    BFS Approach
+
     public List<Integer> rightSideView(TreeNode root) {
         if (root == null) return Collections.emptyList();
         List<Integer> result = new ArrayList<>();
@@ -25,6 +29,24 @@ class Solution {
         }
         return result;
     }
+
+    */
+
+    // DFS Approach
+
+    public List<Integer> rightSideView(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        rightSideView(root, 0, result);
+        return result;
+    }
+
+    private void rightSideView(TreeNode root, int level, List<Integer> result) {
+        if (root == null) return;
+        if (result.size() == level) result.add(root.val);
+        rightSideView(root.right, level + 1, result);
+        rightSideView(root.left, level + 1, result);
+    }
+
 }
 
 class TreeNode {
