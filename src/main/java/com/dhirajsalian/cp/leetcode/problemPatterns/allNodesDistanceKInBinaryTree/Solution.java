@@ -14,6 +14,10 @@ import java.util.Set;
 
 class Solution {
 
+    /*
+
+    BFS Approach
+
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         if (root == null || target == null) return Collections.emptyList();
         List<Integer> result = new ArrayList<>();
@@ -53,6 +57,36 @@ class Solution {
         dfs(root.left, root, parentMap);
         dfs(root.right, root, parentMap);
     }
+
+    */
+
+
+    // DFS Approach
+    public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
+        Map<TreeNode, TreeNode> parent = new HashMap<>();
+        populateParent(root, null, parent);
+        List<Integer> nodesAtDistanceK = new ArrayList<>();
+        populateNodesAtDistanceK(target, 0, k, new HashSet<>(), parent, nodesAtDistanceK);
+        return nodesAtDistanceK;
+    }
+
+    public void populateParent(TreeNode root, TreeNode parent, Map<TreeNode, TreeNode> parentMap) {
+        if (root == null) return;
+        parentMap.put(root, parent);
+        populateParent(root.left, root, parentMap);
+        populateParent(root.right, root, parentMap);
+    }
+
+    public void populateNodesAtDistanceK(TreeNode root, int level, int k, Set<TreeNode> seen, Map<TreeNode, TreeNode> parent, List<Integer> nodesAtDistanceK) {
+        if (root == null || seen.contains(root)) return;
+        seen.add(root);
+        if (level == k) nodesAtDistanceK.add(root.val);
+        populateNodesAtDistanceK(root.left, level + 1, k, seen, parent, nodesAtDistanceK);
+        populateNodesAtDistanceK(root.right, level + 1, k, seen, parent, nodesAtDistanceK);
+        populateNodesAtDistanceK(parent.get(root), level + 1, k, seen, parent, nodesAtDistanceK);
+    }
+
+
 }
 
 class TreeNode {
