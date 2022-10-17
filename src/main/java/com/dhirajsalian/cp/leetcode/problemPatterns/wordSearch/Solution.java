@@ -46,17 +46,4 @@ class Solution {
     private boolean isValidIndex(int i, int j, int iMax, int jMax, boolean[][] seen) {
         return i >= 0 && i <= iMax && j >= 0 && j <= jMax && !seen[i][j];
     }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.exist(new char[][]{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}, "ABCCED");
-    }
 }
-
-
-/*
-
-{{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}}
-"ABCCED"
-
- */

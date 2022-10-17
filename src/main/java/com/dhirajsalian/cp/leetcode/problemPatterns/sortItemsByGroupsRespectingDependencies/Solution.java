@@ -68,11 +68,4 @@ class Solution {
         }
         return sortedOrder.size() == n;
     }
-
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        int[] ans = sol.sortItems(8, 2, new int[]{-1, -1, 1, 0, 0, 1, 0, -1}, List.of(Collections.emptyList(),
-                List.of(6), List.of(5), List.of(6), List.of(3, 6), Collections.emptyList(),
-                Collections.emptyList(), Collections.emptyList()));
-    }
 }
