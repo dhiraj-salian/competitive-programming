@@ -14,4 +14,15 @@ class Solution {
         }
         return possible[nums.length - 1];
     }
+
+    // greedy approach
+    /*public boolean canJump(int[] nums) {
+        int last = nums.length -1;
+        if(last==0) return true;
+        for(int i=last-1;i>=0;i--) {
+            if(i+nums[i]>=last) last = i;
+            if(last==0) return true;
+        }
+        return false;
+    }*/
 }
