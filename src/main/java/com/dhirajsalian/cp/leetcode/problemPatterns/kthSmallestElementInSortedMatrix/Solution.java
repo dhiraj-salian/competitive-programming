@@ -28,4 +28,21 @@ class Solution {
         }
         return count;
     }
+
+    /*
+        Max Heap :
+
+        public int kthSmallest(int[][] matrix, int k) {
+            PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
+            int colSize = matrix.length, rowSize = matrix[0].length;
+            for (int i = 0; i < colSize; i++) {
+                for (int j = 0; j < rowSize; j++) {
+                    pq.offer(matrix[i][j]);
+                    if (pq.size() > k) pq.poll();
+                }
+            }
+            return pq.peek();
+        }
+
+     */
 }
